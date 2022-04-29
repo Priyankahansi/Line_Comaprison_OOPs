@@ -2,8 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class LineComparison {
-    Scanner scanner = new Scanner(System.in);
+ class A {
 
     String lengthOfLine() {
         Scanner scanner = new Scanner(System.in);
@@ -14,6 +13,8 @@ public class LineComparison {
         System.out.println();
         return lengthOfLine;
     }
+}
+     class B extends A {
 
     void checkEqualityOfTwoLines() {
         String line1 = lengthOfLine();
@@ -22,6 +23,8 @@ public class LineComparison {
         System.out.println(line1.equals(line2));
     }
 
+}
+class C extends B {
     void compareTwoLines() {
         String line1 = lengthOfLine();
         String line2 = lengthOfLine();
@@ -29,12 +32,15 @@ public class LineComparison {
         System.out.println(line1.compareTo(line2));
     }
 
+}
+class LineComparison
+{
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
-        LineComparison obj1 = new LineComparison();
-        obj1.checkEqualityOfTwoLines();
+        C obj1 = new C();
         obj1.compareTwoLines();
         obj1.lengthOfLine();
+        obj1.checkEqualityOfTwoLines();
     }
 }
 
